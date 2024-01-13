@@ -79,7 +79,8 @@ local options = {
       behavior = cmp.ConfirmBehavior.Insert,
       select = true,
     },
-    ["<Tab>"] = cmp.mapping(function(fallback)
+    -- go to the next buffer 
+    ["<C-Tab>"] = cmp.mapping(function(fallback) -- Tab
       if cmp.visible() then
         cmp.select_next_item()
       elseif require("luasnip").expand_or_jumpable() then
